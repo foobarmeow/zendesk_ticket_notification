@@ -1,0 +1,30 @@
+{
+  "app": {
+    "description": {
+      "title": "App description",
+      "value": "Notification widget for specified view."
+    },
+    "name": {
+      "title": "Name of the App",
+      "value": "Ticket Notification Widget"
+    },
+    "parameters": {
+      "view_id": {
+        "label": {
+          "title": "ID of view",
+          "value": "ID of view"
+        },
+        "helpText": {
+          "title": "Help text view ID",
+          "value": "Enter the ID of the desired view you'd like notifications from. (/api/v2/views.json)"
+        },
+        "display_name": {
+          "title": "Widget display title.",
+          "value": "What you'd like to diplay in the title bar of the widget."
+        }
+      }
+    },
+    "package": "ticket_notification_widget"
+  }
+    }
+

@@ -1,0 +1,22 @@
+{
+    "name": "Ticket Notification Widget",
+    "author": {
+        "name": "Caleb Davis",
+        "email": "caleb.davis@gcu.edu"
+    },
+    "defaultLocale": "en",
+    "private": false,
+    "location": "top_bar",
+    "frameworkVersion": "1.0",
+    "version": "1.0",
+    "parameters": [{
+        "name": "view_id",
+        "type": "number",
+        "required": true
+        },
+        {
+        "name":"display_name",
+        "type": "text",
+        "required": true
+            }]
+}

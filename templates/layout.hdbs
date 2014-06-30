@@ -1,0 +1,7 @@
+<audio class="alertsound" preload="auto" src="{{assetURL "alertsound.ogg"}}"></audio>
+<h3 id="title">{{setting "display_name"}}</h3>
+<div class="headcontainer">
+<span class="name"><h3>Hello {{store "name"}}!</h3></span>
+<div class="alerttoggle"><h3>On</h3><h3>Off</h3></div>
+</div>
+<section data-main />
