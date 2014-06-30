@@ -35,6 +35,11 @@ padding: 3px;
 border-radius: 2px;
 margin:5px 5px;
 }
+.entry:hover{
+	.description{
+	display:block;
+}
+}
 .headcontainer{
 	-webkit-touch-callout: none;
 -webkit-user-select: none;
@@ -58,4 +63,7 @@ user-select: none;
 .open a{
 	color:white;
 	text-decoration: underline;
+}
+.description{
+	display:none;
 }

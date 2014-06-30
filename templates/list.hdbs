@@ -2,6 +2,7 @@
 <div class="entry {{status}}">
 <i><h4 class="status">{{status}}</h4></i>
 <a href="{{url}}" class="url">{{id}} - {{name}}</a>
+<p class="description">{{description}}</p>
 </div>
 {{else}}
 <p><i>No new tickets!</i></p>
