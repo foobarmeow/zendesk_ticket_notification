@@ -15,7 +15,7 @@
             "goback": _.debounce(function() {
                 if (on === true)
                 this.requestTickets();
-            }, 5000), 
+            }, 10000), 
             // DOM Events
             "click .alerttoggle": "togglealerts"
         },

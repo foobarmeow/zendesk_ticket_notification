@@ -20,6 +20,7 @@ If you want to change the sound that plays when a new ticket arrives, you can de
 
 I take no responsibility if this app in any way harms your Zendesk (though I have no reason to believe it should). It may or may not violate your terms of service with Zendesk, so I would check with that just to be sure. 
 
-The app pulls the view you designate every five seconds. You could modify the app to pull it more frequently than that, but I am not sure if that would clash with the API's rate limiting. Use this app at your own risk! 
+## Important!
+The app pulls the view you designate every ten seconds. This app should only be used for LOW VOLUME VIEWS. It could affect the performance of your Zendesk if you modify it to request the view any more frequently than that. The API limits requests to 200 per minute. So take the number of request you would make per minute, divide 200 by that number, and that is how many agents can use this app before potentially affecting the performance of your Zendesk.  
 
 Please post if you come up with any issues! I would love to get some feedback on this. 
