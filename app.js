@@ -1,13 +1,16 @@
 (function() {
             var on = true;
+
     return {
         events: {
             // APP Events
             "app.activated": function(data){
             if(data.firstLoad){
+
             this.popover();
             }
             this.requestTickets();
+            console.log(on);
             },
             // AJAX Events
             "getView.done": "requestNames",
@@ -37,20 +40,19 @@
         this.ajax('getNames', requesters);
     },
     togglealerts: function(){
-        on = this.store('togglealerts');
-        this.$('.alerttoggle').toggleClass('on');
-        if (on === null){
-            on = true;
-        }
         on = !on;
+        this.$('.alerttoggle').toggleClass('on');
         if (on === false){
         this.changeicons("off");    
         this.switchTo('off');
         }
         if (on === true){
-        this.switchTo('spinner');}
-        this.store({togglealerts: on});
-        this.trigger('goback');
+        this.switchTo('spinner');
+        this.requestTickets();
+        }
+
+        console.log(on);
+
     },
     requestTickets: function(){
         var currentuser = this.currentUser();
