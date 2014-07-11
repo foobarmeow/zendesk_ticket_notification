@@ -10,7 +10,6 @@
             this.popover();
             }
             this.requestTickets();
-            console.log(on);
             },
             // AJAX Events
             "getView.done": "requestNames",
@@ -51,7 +50,6 @@
         this.requestTickets();
         }
 
-        console.log(on);
 
     },
     requestTickets: function(){
