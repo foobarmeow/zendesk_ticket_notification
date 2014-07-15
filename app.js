@@ -12,8 +12,7 @@
             this.requestTickets();
             },
             // AJAX Events
-            "getView.done": "requestNames",
-            "getNames.done": "arrayifynames",
+            "getView.done": "arrayifynames",
             "goback": _.debounce(function() {
                 if (on === true)
                 this.requestTickets();
@@ -22,15 +21,10 @@
             "click .alerttoggle": "togglealerts"
         },
         requests: {
-        getNames: function(requesters){
-            return{
-                url: '/api/v2/users/show_many.json?ids=' + requesters
-            };
-        },
         getView: function (){
             var view = this.setting('view_id');
             return {
-            url: '/api/v2/views/' + view + '/tickets.json',
+            url: '/api/v2/views/' + view + '/tickets.json?include=users',
             type: 'GET'
             };
         }
@@ -63,16 +57,8 @@
         }
         this.ajax('getView');
     },
-    requestNames: function(data){
-        var requestersjson = [];
-        for (var i = 0; i < data.count; i++){
-            requestersjson.push(data.tickets[i].requester_id);
-        }
-        this.store({tickets: data});
-        var requesters = requestersjson.join();
-        this.ajax('getNames', requesters);
-    },
     arrayifynames: function(data){
+        this.store({tickets: data});
         var names = {};
         for (var i = 0; i < data.count; i++){
             names[data.users[i].id] = data.users[i].name;
