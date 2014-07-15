@@ -13,6 +13,7 @@
             },
             // AJAX Events
             "getView.done": "arrayifynames",
+            ".click .dismiss": "dismiss",
             "goback": _.debounce(function() {
                 if (on === true)
                 this.requestTickets();
@@ -28,9 +29,6 @@
             type: 'GET'
             };
         }
-    },
-    names: function(requesters){
-        this.ajax('getNames', requesters);
     },
     togglealerts: function(){
         on = !on;
