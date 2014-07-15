@@ -58,7 +58,7 @@
     arrayifynames: function(data){
         this.store({tickets: data});
         var names = {};
-        for (var i = 0; i < data.count; i++){
+        for (var i = 0; i < data.users.length; i++){
             names[data.users[i].id] = data.users[i].name;
         }
             this.iteratetickets(names);
